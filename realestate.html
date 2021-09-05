@@ -19,12 +19,12 @@
     <meta name="keywords" content="HTML,CSS,Learning">
     <meta name="author" content="Nebunu Silviu">
 
-    <script src="../bundles/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./bundles/jquery/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="section-1">
+        <div class="section-1" id="section-1">
             <header>
                 <div class="contacts">
 
@@ -59,11 +59,11 @@
                         <span>PS Contractors</span>
                     </div>
                     <nav>
-                        <a href="#"><span>Home</span></a>
-                        <a href="#"><span>About us</span></a>
-                        <a href="#"><span>Services</span></a>
-                        <a href="#"><span>Projects</span></a>
-                        <a href="#"><span>Contacts</span></a>
+                        <a href="#section-1"><span>Home</span></a>
+                        <a href="#section-4"><span>About us</span></a>
+                        <a href="#section-2"><span>Services</span></a>
+                        <a href="#section-3"><span>Projects</span></a>
+                        <a href="#section-6"><span>Contacts</span></a>
                     </nav>
                     <div>
                         <button>Get a quote</button>
@@ -74,11 +74,14 @@
             <section class="greeting-section">
                 <div>
                     <h1>Stable, Strong, Safe</h1>
-                    <span>Save yourself time and effort by getting a Free quote.</span>
-                    <a href="#">
-                        <span>Learn More</span>
+                    <span>Get a builders quote for the day</span>
+                    <a href="#" class="learn-more">
+                        <span>More</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
+                    <div class="quotes">
+
+                    </div>
                 </div>
                 <div>
                     <span class="welcome">Welcome to PS Building Contractors LTD</span>
@@ -90,7 +93,7 @@
             </section>
         </div>
 
-        <div class="section-2">
+        <div class="section-2" id="section-2">
             <div class="section-2-container">
                 <div class="attributes">
                     <div>
@@ -137,33 +140,33 @@
 
                 <div class="services-box">
                     <div class="services-wrapper">
-                        <div class="plumbing-service">
+                        <div data-service="1" class="item plumbing-service">
                             <div><i class="fas fa-wrench"></i></div>
                             <span>Plumbing</span>
                         </div>
-                        <div class="electricity-service">
+                        <div data-service="2" class="item electricity-service">
                             <div><i class="fas fa-plug"></i></div>
                             <span>Electricity</span>
                         </div>
-                        <div class="carpentry-service">
+                        <div data-service="3" class="item carpentry-service">
                             <div><i class="fas fa-hammer"></i></div>
                             <span>Carpentry</span>
                         </div>
-                        <div class="decoration-service">
+                        <div data-service="4" class="item decoration-service">
                             <div><i class="fas fa-paint-roller"></i></div>
                             <span>Decoration</span>
                         </div>
-                        <div class="refurbishments-service">
+                        <div data-service="5" class="item refurbishments-service">
                             <div><i class="fas fa-tools"></i></div>
                             <span>Refurbishments</span>
                         </div>
-                        <div class="extensions-service">
+                        <div data-service="6" class="item extensions-service">
                             <div><i class="fas fa-pencil-ruler"></i></div>
                             <span>Extensions</span>
                         </div>
                     </div>
                     <div class="services-description">
-                        <div class="description-box plumbing selected">
+                        <div data-description="1" class="description-box plumbing selected">
                             <div>
                                 <span>Plumbing</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt mollitia vitae,
@@ -175,7 +178,7 @@
                             </div>
                             <div></div>
                         </div>
-                        <div class="description-box electricity hidden">
+                        <div data-description="2" class="description-box electricity hidden">
                             <div>
                                 <span>Electricity</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt mollitia vitae,
@@ -187,7 +190,7 @@
                             </div>
                             <div></div>
                         </div>
-                        <div class="description-box carpentry hidden">
+                        <div data-description="3" class="description-box carpentry hidden">
                             <div>
                                 <span>Carpentry</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt mollitia vitae,
@@ -199,7 +202,7 @@
                             </div>
                             <div></div>
                         </div>
-                        <div class="description-box decoration hidden">
+                        <div data-description="4" class="description-box decoration hidden">
                             <div>
                                 <span>Decoration</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt mollitia vitae,
@@ -211,7 +214,7 @@
                             </div>
                             <div></div>
                         </div>
-                        <div class="description-box refurbishments hidden">
+                        <div data-description="5" class="description-box refurbishments hidden">
                             <div>
                                 <span>Refurbishments</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt mollitia vitae,
@@ -223,7 +226,7 @@
                             </div>
                             <div></div>
                         </div>
-                        <div class="description-box extensions hidden">
+                        <div data-description="6" class="description-box extensions hidden">
                             <div>
                                 <span>Extensions</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nesciunt mollitia vitae,
@@ -240,7 +243,7 @@
             </div>
         </div>
 
-        <div class="section-3">
+        <div class="section-3" id="section-3">
             <div class="projects">
                 <span>Projects</span>
             </div>
@@ -274,7 +277,7 @@
             </div>
         </div>
 
-        <div class="section-4">
+        <div class="section-4" id="section-4">
             <span>We are a professional construction company</span>
             <p>P&S Building Contractors Ltd are a North London based company carrying out property maintanance,
                 installation and construction services work across the London. By listening and working closely woth
@@ -322,7 +325,7 @@
             <div class="lobby-pic"></div>
         </div>
 
-        <div class="section-6">
+        <div class="section-6" id="section-6">
             <div class="section-6-container">
                 <div>
                     <span>About us</span>
@@ -404,6 +407,7 @@
     </div>
 
 
+    <script src="./quotes.js"></script>
     <script src="./realestate.js"></script>
 </body>
 
