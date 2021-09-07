@@ -13,21 +13,29 @@ $(function () {
         }
         $(selectedDescription).removeClass('hidden');
     })
-    
-    getPropertyHTML = function(textMessage) {
+
+    getPropertyHTML = function (textMessage) {
         return `<p> ${textMessage} </p>`
     }
-    quoteListCategory = function(quoteList, randomNumberGnerator) {
+    quoteListCategory = function (quoteList, randomNumberGnerator) {
         let getRandomQuote = quoteList[randomNumberGnerator].paragraph;
         let getRandomQuoteHTML = getPropertyHTML(getRandomQuote);
         $('.quotes').html(getRandomQuoteHTML);
     }
-    learnMore.click(function (event) {  
+    learnMore.click(function (event) {
         quoteListCategory(quoteList, randomNumberGnerator());
         console.log(quoteList)
     })
 
-    randomNumberGnerator = function (){
-        return (Math.floor(Math.random()*5));
-     }
+    randomNumberGnerator = function () {
+        return (Math.floor(Math.random() * 5));
+    }
+
+    $('.get-quote').click(function () {
+        $('.overlay').removeClass('hidden'); 
+    })
+    $('.close-overlay').click(function () {
+        $('.overlay').addClass('hidden');
+    })
+
 })

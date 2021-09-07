@@ -38,6 +38,71 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(10, 10, 10, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.overlay form {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+.overlay form input {
+    margin-bottom: 1em;
+    opacity: 0.9;
+}
+.overlay form .segmented-input {
+    display: flex;
+}
+.overlay form .input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.street { 
+    width: 70%;
+}
+#street {
+    width: 80%;
+}
+.number {
+    width: 30%;
+}
+.city { 
+    width: 70%;
+}
+#city {
+    width: 80%;
+}
+.postalCode {
+    width: 30%;
+}
+.overlay form textarea {
+    opacity: 0.9;
+}
+form button { 
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.close-overlay {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+}
+.close-overlay i {
+    font-size: 50px;
+    color: red;
+}
 .contacts {
     display: flex;
     justify-content: flex-end;
@@ -371,6 +436,23 @@ html, body {
 }
 .projects-box > div:last-child:hover {
     background-image: linear-gradient(0deg, rgba(10, 10, 10, 0.7), rgba(17, 17, 17, 0.7)), url(./poze/building8.jpg);
+}
+.projects-overlay > div {
+    width: 400px;
+    height: 450px;
+    background-color: #fff;
+}
+.projects-overlay .project-img {
+    width: 400px;
+    height: 400px;
+}
+.projects-overlay .project-info {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: black;
 }
 .view-projects {
     width: fit-content;
