@@ -437,7 +437,18 @@ form button {
 .projects-box > div:last-child:hover {
     background-image: linear-gradient(0deg, rgba(10, 10, 10, 0.7), rgba(17, 17, 17, 0.7)), url(./poze/building8.jpg);
 }
-
+.projects-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(10, 10, 10, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
 .projects-overlay > div {
     width: 400px;
     height: 450px;
