@@ -38,4 +38,37 @@ $(function () {
         $('.overlay').addClass('hidden');
     })
 
+    $('.project-item').click(function(event) {
+        let imgUrl =  "url(./poze/building" + event.target.getAttribute('data-id') + ".jpg)";
+        $('.project-img-wrapper').css('background-image', imgUrl);
+        $('.projects-overlay').removeClass('hidden');
+        let projectIndex = parseInt(event.target.getAttribute('data-id'));
+        $('.modal-arrow-right').attr('data-id', projectIndex + 1);
+        $('.modal-arrow-left').attr('data-id', projectIndex == 1 ? projectIndex : projectIndex - 1);
+    })
+    
+    $('.modal-arrow-right').click(function (event) { 
+        console.log(event.target.getAttribute('data-id'))
+        let getDataAttribute = event.target.getAttribute('data-id');
+        let imgUrl =  "url(./poze/building" + getDataAttribute + ".jpg)";
+        $('.project-img-wrapper').css('background-image', imgUrl);
+        if(getDataAttribute < $('.project-item').length) {
+            $('.modal-arrow-right').attr('data-id', parseInt(getDataAttribute) + 1);
+            $('.modal-arrow-left').attr('data-id', parseInt(getDataAttribute) - 1);
+        }
+    })
+     $('.modal-arrow-left').click(function (event) { 
+        console.log(event.target.getAttribute('data-id'))
+        let getDataAttribute = event.target.getAttribute('data-id');
+        let imgUrl =  "url(./poze/building" + getDataAttribute + ".jpg)";
+        $('.project-img-wrapper').css('background-image', imgUrl);
+        if(getDataAttribute > 1) {
+            $('.modal-arrow-right').attr('data-id', parseInt(getDataAttribute) + 1);
+            $('.modal-arrow-left').attr('data-id', parseInt(getDataAttribute) - 1);
+        }
+    })
+    $('.close-project-overlay').click(function () { 
+        $('.projects-overlay').addClass('hidden');
+     })
+
 })

@@ -296,14 +296,14 @@
             </nav>
 
             <div class="projects-box">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div data-id="1" class="project-item"></div>
+                <div data-id="2" class="project-item"></div>
+                <div data-id="3" class="project-item"></div>
+                <div data-id="4" class="project-item"></div>
+                <div data-id="5" class="project-item"></div>
+                <div data-id="6" class="project-item"></div>
+                <div data-id="7" class="project-item"></div>
+                <div data-id="8" class="project-item"></div>
             </div>
 
             <div class="view-projects">
@@ -312,14 +312,17 @@
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="overlay projects-overlay">
-                <div>
-                    <div class="project-img"></div>
+            <div class="overlay projects-overlay hidden">
+                <div class="project-wrapper">
+                    <div class="project-img-wrapper"></div>
                     <div class="project-info">
                         <span>name</span>
                         <span>price</span>
                     </div>
+                    <i data-id="" class="fas fa-angle-double-right modal-arrow-right"></i>
+                    <i data-id="" class="fas fa-angle-double-left modal-arrow-left"></i>
                 </div>
+                <div class="close-project-overlay"><i class="fas fa-times"></i></div>
             </div>
         </div>
 
@@ -452,7 +455,7 @@
 
     </div>
 
-
+    <script src="./projects.js"></script>
     <script src="./quotes.js"></script>
     <script src="./realestate.js"></script>
 </body>

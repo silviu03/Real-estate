@@ -437,14 +437,49 @@ form button {
 .projects-box > div:last-child:hover {
     background-image: linear-gradient(0deg, rgba(10, 10, 10, 0.7), rgba(17, 17, 17, 0.7)), url(./poze/building8.jpg);
 }
+
 .projects-overlay > div {
     width: 400px;
     height: 450px;
     background-color: #fff;
 }
-.projects-overlay .project-img {
+.projects-overlay .close-project-overlay {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    background-color: transparent;
+}
+.projects-overlay .close-project-overlay i {
+    color: red;
+    font-size: 50px;
+}
+
+.projects-overlay .project-img-wrapper {
     width: 400px;
     height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.project-wrapper {
+    position: relative;
+}
+.project-wrapper i {
+    color: red;
+    font-size: 50px;
+    cursor: pointer;
+}
+.modal-arrow-right {
+    position: absolute;
+    top: 215px;
+    right: -150px;
+}
+.modal-arrow-left {
+    position: absolute;
+    top: 215px;
+    left: -150px;
 }
 .projects-overlay .project-info {
     height: 50px;
